@@ -30,7 +30,7 @@ runs:
           git checkout "${{ inputs.susfs_commit }}"
         fi
 
-        cd susfs4ksu
+        cd ${{ github.workspace }}/susfs4ksu
 
         COMMIT1="8d2420be13e43d4cc0d80215d08ed475081a1404"
         COMMIT2="ee71ca33d08710d686f2bdba27cacefe9e615fb9"
