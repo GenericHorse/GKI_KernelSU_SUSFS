@@ -82,7 +82,7 @@ runs:
         fi
         if [ "${{ inputs.sublevel }}" -ge "157" ]; then
           echo "Reverting namespace.c Android 14 6.1 Fake Patch"
-          sed -i '/^#include "internal.h"$/a #include <trace/hooks/blk.h>' fs/namespace.c
+          sed -i '\|\^#include "internal.h"\$|a #include <trace/hooks/blk.h>' fs/namespace.c
         fi
 
     - name: Revert Android 15 6.6 Fake Patches
