@@ -61,7 +61,7 @@ runs:
         fi
         if [ "${{ inputs.sublevel }}" -ge "197" ]; then
           echo "Reverting namespace.c Android 13 5.15 Fake Patch"
-          sed -i '/^#include "internal.h"$/a #include <trace/hooks/blk.h>' fs/namespace.c
+          sed -i '/^#include "internal.h"$/a #include <trace\/hooks\/blk.h>' fs/namespace.c
         fi
         if [ "${{ inputs.sublevel }}" -ge "206" ]; then
           echo "Reverting task_mmu.c Android 13 5.15 Fake Patch"
